@@ -1,0 +1,7 @@
+<h2>Login</h2>
+<p *ngIf="message != null">{{ message }}</p>
+<form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+    <input type="text" formControlName="email" class="form-control"/>
+    <input type="password" formControlName="userpass" class="form-control"/>
+    <button value="submit">Login</button>
+</form>
